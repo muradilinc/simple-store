@@ -1,0 +1,41 @@
+@use "var" as *;
+@use "mixins" as *;
+
+.header {
+  padding: 23px 0 13px;
+  border-bottom: 1px solid $milk;
+  background: $milk;
+  @include lg{
+    padding: 11px 0;
+  }
+  &__logo{
+    padding: 0 15px;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    @include lg{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__user-link {
+    align-self: center;
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+    @include lg{
+      margin: 0;
+    }
+  }
+
+  &__link-item {
+    display: flex;
+    margin-left: 38px;
+    @include lg{
+      margin-left: 28px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@use "var" as *;
+@use "mixins" as *;
+
+.category {
+  padding: 35px 0 11px;
+  background: $milk;
+  @include md{
+    padding: 116px 0 124px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__link{
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin-bottom: 49px;
+    &:nth-child(2n) {
+      margin-left: 18px;
+    }
+    @include hover{
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    @include md{
+      width: 164px;
+      &:nth-child(2n) {
+        margin: 0;
+      }
+    }
+  }
+
+
+  &__img {
+    width: 114px;
+    padding: 20px;
+    background: $white;
+    box-sizing: content-box;
+    border-radius: 12px;
+    @include md{
+      width: 124px;
+    }
+  }
+
+  &__card-title {
+    margin: 16px 0 0 0;
+    color: $dark-blue;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}

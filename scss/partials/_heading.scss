@@ -1,0 +1,83 @@
+@use "mixins" as *;
+
+.heading {
+  margin: 56px auto 62px;
+  @include xl{
+    margin: 92px auto;
+  }
+
+  &__inner {
+    @include lg {
+      display: flex;
+    }
+  }
+
+  &__all {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 8px;
+    background: linear-gradient(152deg, #FFF8F6 0%, #F2F5F9 100%);
+    margin-bottom: 12px;
+    @include lg {
+      padding: 40px;
+      margin: 0 32px 0 0;
+    }
+    @include xl{
+      border-radius: 16px;
+      width: 90%
+    }
+  }
+
+  &__all-title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 12px;
+    flex-grow: 1;
+    @include lg{
+      margin-bottom: 32px;
+      font-size: 32px;
+      line-height: 1.5;
+    }
+    @include xl{
+      font-size: 40px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 8px;
+    background: url("../uploads/iphone.png") bottom -12px right 20px / 135px no-repeat, linear-gradient(152deg, #FFF8F6 0%, #F2F5F9 100%);
+    @include lg{
+      padding: 40px;
+    }
+    @include xl{
+      width: 54%;
+      border-radius: 16px;
+      background-size: 199px;
+    }
+  }
+
+  &__top-title {
+    width: 65%;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
+    flex-grow: 1;
+    @include lg{
+      width: 95%;
+      font-size: 32px;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+    @include xl{
+      font-size: 40px;
+      line-height: 1.4;
+    }
+  }
+  &__link{
+    align-self: start;
+  }
+}

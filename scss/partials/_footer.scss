@@ -1,0 +1,61 @@
+@use "var" as *;
+@use "mixins" as *;
+
+.footer{
+  padding: 20px 0;
+  background: $milk;
+  @include md{
+    padding: 41px 0 32px;
+  }
+  &__up{
+    @include md{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &__img{
+    width: 186px;
+  }
+  &__social{
+    margin-top: 20px;
+  }
+  &__user{
+    @include md{
+      margin-top: 0;
+    }
+    margin-top: 24px;
+  }
+  &__popular{
+    @include md{
+      margin-top: 0;
+    }
+    margin-top: 24px;
+  }
+  &__team{
+    margin-top: 24px;
+    @include md{
+      width: 41%;
+    }
+    @include xlg{
+      width: auto;
+      margin-top: 0;
+    }
+  }
+  &__down{
+    margin-top: 24px;
+    border-top: 1px solid #ECEEEF;
+    @include md{
+      border-top: none;
+      border-bottom: 1px solid #ECEEEF;
+    }
+  }
+  &__text{
+    padding-top: 24px;
+    margin: 0;
+    color: $gray;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}

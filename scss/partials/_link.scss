@@ -1,0 +1,17 @@
+@use "var" as *;
+.link{
+  color: $gray;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  display: inline-block;
+  padding: 31px 0 0;
+  &_stat{
+    background: url("../images/stat.svg") 50% 5px no-repeat;
+    margin-right: 30px;
+  }
+  &_user{
+    background: url("../images/user.svg") 50% 5px no-repeat;
+  }
+}

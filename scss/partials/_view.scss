@@ -1,0 +1,59 @@
+@use "var" as *;
+@use "mixins" as *;
+
+.view {
+  padding-bottom: 49px;
+  @include md{
+    margin-bottom: 136px;
+  }
+  &__cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  &__card {
+    margin-bottom: 51px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 12px;
+    background: var(--grayscale-100, #F6F7FA);
+    @include md{
+      width: 48%;
+    }
+    @include lg{
+      margin-bottom: 0;
+      width: calc(350 / 1440 * 100%);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+
+  &__info {
+    padding: 16px 16px 0 16px;
+    flex-grow: 1;
+  }
+
+  &__card-title {
+    margin: 0 0 12px;
+    color: $dark-blue;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  &__desc{
+    margin: 0 0 12px;
+    color: $gray;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  &__btn{
+    margin: 0 0 16px 16px;
+  }
+}

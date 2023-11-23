@@ -1,0 +1,55 @@
+@use "var" as *;
+@use "mixins" as *;
+
+.services{
+  padding: 71px 15px 52px;
+  @include lg{
+    padding: 110px 15px 126px;
+  }
+  &__title{
+    font-size: 16px;
+    line-height: 1.2;
+    @include md{
+      width: 70%;
+      font-size: 24px;
+    }
+    @include xl{
+      width: 38%;
+    }
+  }
+  &__cards{
+    margin-top: 16px;
+    @include md{
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &__card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    @include md{
+      width: 45%;
+      &:nth-child(2n){
+        margin-left: 12px;
+      }
+    }
+    @include lg{
+      width: calc(336 / 1440 * 100%);
+      &:nth-child(2n){
+        margin-left: 0;
+      }
+    }
+  }
+  &__text{
+    flex-grow: 1;
+    margin: 4px 0 0 0;
+    color: $dark-blue;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+}
